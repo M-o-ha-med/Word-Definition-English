@@ -1,0 +1,36 @@
+buildscript {
+    ext {
+        compose_version = '1.4.1'
+        kotlin_version = '1.8.0'
+        lifecycle_version = '2.6.1' // Update to the latest
+        activity_version = '1.7.0' // Update to the latest
+        junit_version = '4.13.2'
+        android_junit_version = '1.1.5'
+        espresso_version = '3.5.1'
+        compose_viewmodel_version = '2.5.0' // Update to the latest
+        coroutines_version = '1.7.3' // Update to the latest
+        coroutines_scopes_version = '2.5.0' // Update to the latest
+        hilt_version = '2.48' // Update to the latest
+        hilt_android_compiler_version = '2.48' // Align with Hilt version
+        hilt_lifecycler_version = '1.0.0' // Stable version
+        hilt_compiler_version = '1.0.0'
+        hilt_navigation_compose_version = '1.0.0'
+        retrofit_version = '2.9.0'
+        okhttp_version = '5.0.0-alpha.11'
+        room_version = '2.5.1' // Update to the latest
+        agp_version1 = '8.7.2' // Update to match Kotlin and Gradle versions
+    }
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$agp_version1"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "com.google.dagger:hilt-android-gradle-plugin:$hilt_version"
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
